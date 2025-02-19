@@ -1,12 +1,11 @@
 package Analysis;
 
-import ParallelAlgorithm.MergeSort.ParallelMergeSort;
-import ParallelAlgorithm.MergeSort.SerialMergeSort;
+import ParallelAlgorithm.HyperQuickSort.ParallelQuickSort;
+import ParallelAlgorithm.HyperQuickSort.SerialQuickSort;
 
 import java.util.Arrays;
 
-public class MergeSortAnalysis {
-
+public class QuickSortAnalysis {
     public static void main(String[] args) {
         long sortingStartTime, sortingEndTime;
 
@@ -17,16 +16,16 @@ public class MergeSortAnalysis {
         }
 
         sortingStartTime = System.currentTimeMillis();
-        ParallelMergeSort.parallelMergeSort(array1);
+        ParallelQuickSort.parallelQuickSort(array1);
         sortingEndTime = System.currentTimeMillis();
 
-        System.out.println("Parallel Merge Sorting Algorithm Time is: "+(sortingEndTime - sortingStartTime)+"ms");
+        System.out.println("Parallel Quick Sorting Algorithm Time is: "+(sortingEndTime - sortingStartTime)+"ms");
 
         sortingStartTime = System.currentTimeMillis();
-        SerialMergeSort.mergeSort(array2);
+        SerialQuickSort.quickSort(array2, 0, array2.length - 1);
         sortingEndTime = System.currentTimeMillis();
 
-        System.out.println("Serial Merge Sorting Algorithm Time is: "+(sortingEndTime - sortingStartTime)+"ms");
+        System.out.println("Serial Quick Sorting Algorithm Time is: "+(sortingEndTime - sortingStartTime)+"ms");
 
 //        TEST CHECK
         System.out.println("Are the arrays sorted equal: "+ Arrays.equals(array1, array2));

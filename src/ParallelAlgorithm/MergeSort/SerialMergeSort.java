@@ -1,4 +1,4 @@
-package ParallelAlgorithm;
+package ParallelAlgorithm.MergeSort;
 
 public class SerialMergeSort {
 

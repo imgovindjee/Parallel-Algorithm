@@ -1,6 +1,6 @@
-package Test;
+package Test.MergeSortTest;
 
-import ParallelAlgorithm.ParallelMergeSort;
+import ParallelAlgorithm.MergeSort.ParallelMergeSort;
 
 public class ParallelMergeSortTest {
     public static void main(String[] args) {
